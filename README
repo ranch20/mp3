@@ -1,0 +1,4 @@
+1. Download FFmpeg: https://www.ffmpeg.org/
+2. Copy full path of ffmpeg/bin
+3. pip install -r requirements.txt
+4. Run
