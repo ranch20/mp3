@@ -51,26 +51,7 @@ def open_containing_folder(file_path):
     subprocess.run(['explorer', '/select,', file_path])
 
 
-def main(song = None, open_folder=False):
-    path = str
-    link = str
-
-    with open("data/ffmpeg_location.txt", "a") as f:
-        pass
-
-    with open("data/ffmpeg_location.txt", "r") as path_file:
-        path = path_file.read()
-        if not path: 
-            path_file.close()
-            with open("data/ffmpeg_location.txt", "w") as path_file:
-                path = (input("Enter FFmpeg path: "))
-                path_file.write(path)
-                path_file.close()
-
-
-    if song: link = song
-    else: link = input("Enter youtube link or search: ")
-    
-    title = download_mp3(link, path)
+def main(FFmpeg_path, song = None, open_folder=False):    
+    title = download_mp3(song, FFmpeg_path)
 
     if open_folder: open_containing_folder(f"output/{title}.mp3")
