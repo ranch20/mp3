@@ -159,6 +159,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-
+# stuff
 ffmpeg_location.txt
-.output
+.output/
+.data/
